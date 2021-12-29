@@ -11,6 +11,7 @@
   --background-color-hover: #188ce8;
   --header-bordeer-color: #ececec;
   --portfolio-border-color: #eeeeee;
+  --icons-color: #afb1b8;
 }
 
 .page {
@@ -148,6 +149,13 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  max-width: 1600px;
+
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../img/hero-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero-title {
@@ -215,6 +223,23 @@ img {
   color: var(--primary-text-color);
 }
 
+.feature-list-bg {
+  width: 270px;
+  height: 120px;
+  background-color: var(--buttons-bgc);
+  margin-bottom: 30px;
+}
+
+.feature-list-link {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-list-icon {
+}
+
 /* -----------------Section-our-work-------------------- */
 .work-types {
   display: flex;
@@ -270,6 +295,10 @@ img {
   background-color: var(--background-color);
 }
 
+.command {
+  background-color: var(--buttons-bgc);
+}
+
 .command-paragraph,
 .command-title {
   font-size: 16px;
@@ -277,8 +306,73 @@ img {
   text-align: center;
 }
 
-.command {
-  background-color: var(--buttons-bgc);
+.command-paragraph {
+  margin-bottom: 16px;
+}
+
+.command-social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.command-social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--icons-color);
+}
+
+.command-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.command-social-icon {
+  fill: currentColor;
+}
+
+.command-social-link:hover,
+.command-social-link:focus {
+  color: var(--accent-color);
+  color: var(--background-color);
+}
+
+/* ------------------Partners---------------- */
+
+.partners-list {
+  display: flex;
+  justify-content: center;
+}
+
+.partners-link {
+  width: 170 px;
+  height: 92 px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background-size: cover;
+  color: var(--icons-color);
+}
+
+.partners-item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+}
+
+.partners-icon {
+  fill: currentColor;
+}
+
+.partners-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.partners-link:hover,
+.partners-link:focus {
 }
 /* ------------------Footer---------------- */
 .footer {
