@@ -119,6 +119,7 @@ img {
 .contacts-list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 
 .main-nav-display {
@@ -127,7 +128,8 @@ img {
 }
 
 .nav-link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -142,34 +144,23 @@ img {
   color: var(--accent-color);
 }
 
-.email-icon {
-  width: 16px;
-  height: 12px;
+.contact-icon {
   margin-right: 10px;
   fill: var(--optional-text-color);
-  align-self: center;
 }
 
-.tel-icon {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  fill: var(--optional-text-color);
-  align-self: center;
-}
 /* --------------------Hero-------------------- */
 .hero {
   background-color: var(--background-color-secondary);
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  max-width: 1600px;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../img/hero-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover, 1600px auto;
 }
 
 .hero-title {
@@ -245,11 +236,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
-}
-
-.feature-list-icon {
-  display: flex;
-  justify-content: center;
+  border-radius: 4px;
 }
 
 /* -----------------Section-our-work-------------------- */
@@ -355,11 +342,9 @@ img {
 
 .partners-list {
   display: flex;
-  justify-content: center;
-}
-
-.partners-list:not(:last-child) {
-  margin-right: 30px;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .partners-link {
@@ -367,17 +352,19 @@ img {
   display: flex;
   width: 170px;
   height: 92px;
-  border-width: 1px;
-  border-style: solid;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  padding: 16px 32px 16px 32px;
+  justify-content: center;
+  align-items: center;
 }
 
 .partners-item {
   display: flex;
   fill: #afb1b8;
-  margin-right: 30px;
+
+  flex-basis: calc(100% / 6 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .partners-icon {
@@ -398,6 +385,7 @@ img {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer .logo {
@@ -441,7 +429,7 @@ img {
   letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
-footer .footer-social-list {
+.footer-social-list {
   display: flex;
   justify-content: center;
 }
@@ -526,9 +514,12 @@ footer .footer-social-list {
   margin-left: 30px;
   margin-top: 30px;
 }
+.portfolio-item-link {
+  display: block;
+}
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-item-link:hover,
+.portfolio-item-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
